@@ -1,0 +1,484 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffe900;
+  font-family: Arial, sans-serif;
+  overflow-y: none; /* Hide vertical scrollbar */
+  overflow-x: none; /* Hide horizontal scrollbar */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.animate-on-scroll {
+  animation: fadeInUp 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.animate-on-scroll.animate-start {
+  opacity: 1;
+}
+
+/* Pastikan .animate-start ditambahkan JS saat elemen muncul */
+
+/* NAVBAR */
+.navbar {
+  background: transparent !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  font-weight: bold;
+  font-size: 15pt;
+  padding-top: 1rem;
+  transition: background 0.3s;
+}
+
+.navbar-brand {
+  font-size: 25pt;
+  font-weight: bolder;
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.btn-book {
+  background-color: #ffe900;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-book:hover {
+  background-color: #ffe900;
+  transform: scale(1.05);
+}
+
+/* HERO SECTION */
+#hero {
+  position: relative;
+  background: url("assets/hero.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#hero-content h1 {
+  font-size: 8rem;
+  font-weight: bolder;
+  color: #ffe900;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+#hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+#hero-schedule {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  background: transparent;
+  color: #fff;
+  padding: 1rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  z-index: 1;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* WELCOME SECTION */
+#welcome-section {
+  background-color: #ffe900;
+  padding: 3rem 2rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#welcome-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#welcome-section p {
+  font-size: 1rem;
+}
+
+#welcome-stats h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#welcome-section img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Opsional: efek saat hover, bayangan sedikit lebih besar */
+#welcome-section img:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* MENU SECTION (BLACK BACKGROUND) */
+#menu-section {
+  background-color: #111;
+  color: #fff;
+  padding: 3rem 2rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#menu-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.menu-item-card {
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.menu-item-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item-card img {
+  width: 100%;
+  height: auto;
+}
+
+.menu-item-card h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.menu-item-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.menu-item-card .stars {
+  color: #ffe900;
+}
+
+.menu-item-card .price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+/* DISCOVER SECTION */
+#discover-section {
+  background-color: #ffe900;
+  padding: 4rem 2rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#discover-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #000;
+
+}
+
+#discover-section p {
+  color: #000;
+  max-width: 600px;
+  font-size: 1rem;
+}
+
+#discover-section img{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.discover-controls {
+  display: inline-flex;
+  gap: 10px;
+  transform: translate(-20%, 130%);
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+  transform: scale(1.1);
+}
+
+.custom-swiper-button-prev::before,
+.custom-swiper-button-next::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  padding: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-swiper-button-prev::before {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.custom-swiper-button-next::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.custom-footer {
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+  margin-bottom: 30px;
+}
+
+.footer-brand {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.footer-btn {
+  display: inline-block;
+  background: #ffe900;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.footer-btn:hover {
+  opacity: 0.9;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #ffe900; /* efek hover, misalnya menjadi kuning */
+}
+
+/* Bagian kanan */
+.footer-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex: 1 1 300px;
+  justify-content: flex-end;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-col p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-copy {
+  text-align: right;
+  font-size: 14px;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+}
+
+
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+  display: none; /* Sembunyikan secara default */
+  position: fixed; /* Posisi tetap */
+  bottom: 40px; /* 40px dari bawah */
+  right: 40px; /* 40px dari kanan */
+  z-index: 99; /* Pastikan berada di atas elemen lain */
+  width: 50px; /* Lebar tombol */
+  height: 50px; /* Tinggi tombol */
+  border: none; /* Hilangkan border */
+  outline: none; /* Hilangkan outline */
+  background-color: #ffe900; /* Warna latar belakang kuning */
+  color: black; /* Warna ikon */
+  cursor: pointer; /* Ubah kursor saat hover */
+  border-radius: 50%; /* Membuat tombol bulat */
+  font-size: 24px; /* Ukuran ikon */
+  display: flex; /* Untuk men-center ikon */
+  align-items: center; /* Vertikal center */
+  justify-content: center; /* Horizontal center */
+  transition: background-color 0.3s, transform 0.3s; /* Transisi halus */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #d4d400; /* Warna kuning lebih gelap saat hover */
+  transform: scale(1.1); /* Sedikit membesar saat hover */
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-right {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  .footer-col {
+    margin-bottom: 20px;
+  }
+
+  .footer-copy {
+    text-align: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero-content h1 {
+    font-size: 4rem;
+  }
+
+  #hero-schedule {
+    left: 1rem;
+    bottom: 1rem;
+  }
+}
